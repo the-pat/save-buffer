@@ -1,6 +1,6 @@
 {
   "name": "save-buffer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turn a buffer into a file",
   "license": "MIT",
   "repository": "the-pat/save-buffer",
