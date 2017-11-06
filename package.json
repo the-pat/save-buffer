@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Turn a buffer into a file",
   "license": "MIT",
-  "repository": "the-pat/image-download",
+  "repository": "the-pat/save-buffer",
   "author": {
     "name": "Patrick Tone",
     "email": "pt@patrickt.one",
