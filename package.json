@@ -1,0 +1,32 @@
+{
+  "name": "save-buffer",
+  "version": "0.0.0",
+  "description": "Turn a buffer into a file",
+  "license": "MIT",
+  "repository": "the-pat/image-download",
+  "author": {
+    "name": "Patrick Tone",
+    "email": "pt@patrickt.one",
+    "url": "patrickt.one"
+  },
+  "engines": {
+    "node": ">=7.6"
+  },
+  "scripts": {},
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "keywords": [
+    "file",
+    "buffer",
+    "save",
+    "image",
+    "video",
+    "memory",
+    "store"
+  ],
+  "dependencies": {
+    "make-dir": "^1.1.0"
+  }
+}
