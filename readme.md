@@ -1,5 +1,7 @@
 # save-buffer
 
+[![Build Status](https://travis-ci.org/the-pat/save-buffer.svg?branch=master)](https://travis-ci.org/the-pat/save-buffer)
+
 > Turn a buffer into a file.
 
 ## Install
