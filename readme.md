@@ -16,9 +16,10 @@ npm install --save save-buffer
 const imageDownload = require('image-download');
 const saveBuffer = require('save-buffer');
 
-imageDownload('https://www.fillmurray.com/g/200/300').then(buffer => {
-    await saveBuffer(buffer, './new/file/path.jpg');
-});
+(async () => {
+  const buffer = await imageDownload('https://www.fillmurray.com/g/200/300');
+  const result = await saveBuffer(buffer, './new/file/path.jpg');
+})();
 ```
 
 ## API

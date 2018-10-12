@@ -32,6 +32,7 @@
     "make-dir": "^1.1.0"
   },
   "devDependencies": {
-    "ava": "^0.23.0"
+    "ava": "^0.25.0",
+    "image-download": "^1.1.0"
   }
 }
