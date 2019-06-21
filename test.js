@@ -31,7 +31,7 @@ test('rejects undefined buffer', async t => {
     }
 });
 
-test('rejects string instead of a buffer', async t => {
+test('rejects string instead of a buffer/2', async t => {
     try {
         const err = await saveBuffer('', './files/test.txt');
         t.fail();
@@ -41,7 +41,7 @@ test('rejects string instead of a buffer', async t => {
     }
 });
 
-test('rejects string instead of a buffer', async t => {
+test('rejects string instead of a buffer/1', async t => {
     try {
         const buffer = Buffer.from('hello world');
         const err = await saveBuffer(buffer);
