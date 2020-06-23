@@ -1,27 +1,27 @@
-'use strict';
+import { writeFile } from "fs";
+import makeDir from "make-dir";
+import { dirname } from "path";
 
-const fs = require('fs');
-const makeDir = require('make-dir');
-const path = require('path');
+export default async (buffer, filePath) => {
+  if (!buffer || !Buffer.isBuffer(buffer)) {
+    throw new TypeError("A buffer is required.");
+  }
 
-module.exports = async(buffer, filePath) => {
-    if (!buffer || !Buffer.isBuffer(buffer)) {
-        throw new TypeError('A buffer is required.');
-    }
+  if (!filePath) {
+    throw new TypeError("A file path is required.");
+  }
 
-    if (!filePath) {
-        throw new TypeError('A file path is required.');
-    }
+  const dir = dirname(filePath);
 
-    const dir = path.dirname(filePath);
+  await makeDir(dir);
 
-    await makeDir(dir);
+  const err = await new Promise((resolve, reject) =>
+    writeFile(filePath, buffer, (err) => {
+      if (err) return reject(err);
 
-    const err = await new Promise((resolve, reject) => fs.writeFile(filePath, buffer, (err) => {
-        if (err) return reject(err);
+      return resolve();
+    })
+  );
 
-        return resolve();
-    }));
-
-    return err;
+  return err;
 };
